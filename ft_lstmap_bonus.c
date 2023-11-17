@@ -6,7 +6,7 @@
 /*   By: mzelouan <mzelouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 16:03:44 by mzelouan          #+#    #+#             */
-/*   Updated: 2023/11/17 04:06:16 by mzelouan         ###   ########.fr       */
+/*   Updated: 2023/11/17 22:46:06 by mzelouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		}
 		return (new_list);
 	}
-	return NULL;
+	return (NULL);
 }

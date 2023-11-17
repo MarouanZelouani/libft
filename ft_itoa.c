@@ -6,14 +6,14 @@
 /*   By: mzelouan <mzelouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 15:12:54 by mzelouan          #+#    #+#             */
-/*   Updated: 2023/11/17 16:00:00 by mzelouan         ###   ########.fr       */
+/*   Updated: 2023/11/17 22:41:35 by mzelouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_digits(long int n)   
-{ 
+static int	count_digits(long int n)
+{
 	int	count;
 
 	count = 1;

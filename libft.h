@@ -23,8 +23,7 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-
-char	**ft_split(char const *s, char c);
+char				**ft_split(char const *s, char c);
 t_list				*ft_lstnew(void *content);
 int					ft_tolower(int c);
 char				*ft_strrchr(const char *s, int c);
@@ -64,11 +63,12 @@ void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
-t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *));
-char	*ft_itoa(int n);
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-void	ft_putendl_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
-void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
+						void (*del)(void *));
+char				*ft_itoa(int n);
+char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void				ft_putendl_fd(char *s, int fd);
+void				ft_putnbr_fd(int n, int fd);
+void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 #endif
