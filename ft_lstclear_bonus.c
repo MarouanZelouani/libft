@@ -6,7 +6,7 @@
 /*   By: mzelouan <mzelouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 02:23:20 by mzelouan          #+#    #+#             */
-/*   Updated: 2023/11/18 20:25:37 by mzelouan         ###   ########.fr       */
+/*   Updated: 2023/11/18 21:16:51 by mzelouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*node;
 	t_list	*next;
-	
+
 	if (lst && del)
 	{
 		node = *lst;
