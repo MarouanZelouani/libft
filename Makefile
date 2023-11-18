@@ -6,22 +6,10 @@
 #    By: mzelouan <mzelouan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/16 15:01:17 by mzelouan          #+#    #+#              #
-#    Updated: 2023/11/16 16:14:24 by mzelouan         ###   ########.fr        #
+#    Updated: 2023/11/18 23:19:21 by mzelouan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# .a archive files or static libraries 
-# (a way to group multible object files)
-# linking =====> compilation process
-# arc rcs 
-# r inserting or replacing
-# c create if doesnt exist
-# s update or create the synbol table 
-# (symboles variabke function names)
-# 
-
-
-# VARIABLES
 NAME = libft.a
 CFILES = 	ft_atoi.c\
 			ft_itoa.c\
@@ -57,7 +45,6 @@ CFILES = 	ft_atoi.c\
 			ft_putendl_fd.c\
 			ft_strlcat.c\
 			ft_substr.c\
-# bonus files
 
 BFILES =	ft_lstnew_bonus.c\
 			ft_lstadd_front_bonus.c\
@@ -68,7 +55,6 @@ BFILES =	ft_lstnew_bonus.c\
 			ft_lstclear_bonus.c\
 			ft_lstiter_bonus.c\
 			ft_lstmap_bonus.c\
-# substitution operation change the extension
 
 OFILES = $(CFILES:.c=.o)
 OBFILES = $(BFILES:.c=.o)
@@ -77,20 +63,11 @@ CC = cc
 RM = rm -f
 AR = ar rc
 
-# DEFAULT RULL
 all: $(NAME)
 
-# -c grnerate an object file rather than executable
-# this rule run when u have a target .c file and you wanna compile it
-# to an .o object file
-# it runs whene the variable OFILES is being used
-# -c preform compilation step without linking
-
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
 $(NAME) : $(OFILES)
-	$(AR) $(NAME) $(OFILES)
+
+bonus : $(OBFILES) $(OFILES)
 
 re: fclean all
 
@@ -100,10 +77,8 @@ clean :
 fclean : clean
 	$(RM) $(NAME)
 
-$(OBFILES) : $(BFILES)
-	$(CC) $(CFLAGS) -c $(BFILES)
-	$(AR) $(NAME) $(OBFILES)	   
-
-bonus : $(OBFILES)
+%.o : %.c
+	$(CC) $(CFLAGS) -c $<
+	$(AR) $(NAME) $@
 
 .PHONY : clean fclean re all
