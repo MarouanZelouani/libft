@@ -6,7 +6,7 @@
 #    By: mzelouan <mzelouan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/16 15:01:17 by mzelouan          #+#    #+#              #
-#    Updated: 2023/11/19 18:23:24 by mzelouan         ###   ########.fr        #
+#    Updated: 2023/11/19 21:36:16 by mzelouan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,13 +66,13 @@ AR = ar rc
 all: $(NAME)
 
 $(NAME) : $(OFILES)
-	$(AR) $(NAME) $(OFILES)
+
 
 bonus : $(OBFILES) $(OFILES)
 
-$(OBFILES) : $(BFILES)
-	$(CC) $(CFLAGS) -c $(BFILES)
-	$(AR) $(NAME) $(OBFILES)
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+	$(AR) $(NAME) $@
 
 re: fclean all
 
