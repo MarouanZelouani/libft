@@ -6,7 +6,7 @@
 /*   By: mzelouan <mzelouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 12:03:02 by mzelouan          #+#    #+#             */
-/*   Updated: 2023/11/11 23:18:16 by mzelouan         ###   ########.fr       */
+/*   Updated: 2023/11/19 06:15:46 by mzelouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*new;
 	size_t	len;
-
+	
+	if (!s1 && !s2)
+		return (NULL);
 	if (!s2)
 		return (ft_strdup(s1));
 	if (!s1)

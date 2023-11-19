@@ -6,7 +6,7 @@
 /*   By: mzelouan <mzelouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 00:47:10 by mzelouan          #+#    #+#             */
-/*   Updated: 2023/11/18 23:13:07 by mzelouan         ###   ########.fr       */
+/*   Updated: 2023/11/19 06:13:38 by mzelouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	j;
 
 	i = 0;
-	j = ft_len(s, start, len);
 	if (!s)
 		return (NULL);
+	j = ft_len(s, start, len);
 	p = malloc((j + 1) * sizeof(char));
 	if (!p)
 		return (NULL);

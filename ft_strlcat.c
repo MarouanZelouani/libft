@@ -6,7 +6,7 @@
 /*   By: mzelouan <mzelouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 23:07:53 by mzelouan          #+#    #+#             */
-/*   Updated: 2023/11/17 19:58:25 by mzelouan         ###   ########.fr       */
+/*   Updated: 2023/11/19 06:16:00 by mzelouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,3 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[dest_len + len] = '\0';
 	return (total_len);
 }
-
-// int main ()
-// {
-// 	char *str = "abc";
-// 	ft_strlcat(str, NULL, 2);
-// }
